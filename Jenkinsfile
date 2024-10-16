@@ -8,7 +8,7 @@ pipeline {
   {
     steps { 
         git branch: 'main', credentialsId: 'GitlabCred', url: 'https://gitlab.com/learndevopseasy/devsecops/spingboot-cd-pipeline.git'
-         sh "echo LETS-DO-A-DUMMYCHECKIN  >> README.MD "
+         sh "echo LETS-DO-A-DUMMYCHECKIN  >> README.md "
 	 sh 'git commit -a -m "New deployment for Build $IMAGE"'
 	 sh "git push https://scmlearningcentre:$PASSWD@gitlab.com/learndevopseasy/devsecops/spingboot-cd-pipeline.git"
     }
