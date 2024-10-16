@@ -1,5 +1,5 @@
 pipeline {
- agent { label 'demo' }
+ agent { label 'build' }
  parameters {
      password(name: 'PASSWD', defaultValue: '', description: 'Please Enter your Gitlab password')
  }
