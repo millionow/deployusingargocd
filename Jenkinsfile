@@ -10,7 +10,7 @@ pipeline {
     steps { 
         git branch: 'main', credentialsId: 'GitlabCred', url: 'https://gitlab.com/learndevopseasy/devsecops/spingboot-cd-pipeline.git'
       dir ("./kubernetes") {
-              sh "sed -i 's/image: adamtravis.*/image: adamtravis\/wezvatechbackend:$IMAGETAG/g' deployment.yml" 
+              sh "sed -i 's/image: adamtravis.*/image: adamtravis\\/wezvatechbackend:$IMAGETAG/g' deployment.yml" 
 	    }
       sh "echo LETS-DO-A-DUMMYCHECKIN  >> README.md "
 	    sh 'git commit -a -m "New deployment for Build $IMAGETAG"'
