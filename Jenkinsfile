@@ -12,7 +12,6 @@ pipeline {
       dir ("./kubernetes") {
               sh "sed -i 's/image: adamtravis.*/image: adamtravis\\/wezvatechbackend:$IMAGETAG/g' deployment.yml" 
 	    }
-      sh "echo LETS-DO-A-DUMMYCHECKIN  >> README.md "
 	    sh 'git commit -a -m "New deployment for Build $IMAGETAG"'
 	    sh "git push https://scmlearningcentre:$PASSWD@gitlab.com/learndevopseasy/devsecops/spingboot-cd-pipeline.git"
     }
