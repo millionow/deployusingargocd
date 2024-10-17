@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: wezvatechdemo
-        image: adamtravis/democicd:latest
+        image: adamtravis/wezvatechbackend:1
         ports:
         - containerPort: 8080
